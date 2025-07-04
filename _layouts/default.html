@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if page.title %}{{ page.title | escape }} - {% endif %}{{ site.title | escape }}</title>
+    <meta name="description" content="{{ page.description | default: site.description | escape }}">
+    
+    <!-- SEO Tags -->
+    {% seo %}
+    
+    <!-- Schema Markup for Local Business -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "{{ site.business.name }}",
+        "description": "{{ site.description }}",
+        "telephone": "{{ site.business.phone }}",
+        "email": "{{ site.business.email }}",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "{{ site.business.address }}"
+        },
+        "openingHours": "{{ site.business.hours }}",
+        "serviceArea": {
+            "@type": "Place",
+            "name": "Melbourne Metro"
+        }
+    }
+    </script>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>{{ site.business.name }}</h1>
+                    <p class="tagline">{{ site.business.tagline }}</p>
+                </div>
+                <div class="contact-info">
+                    <a href="tel:{{ site.business.phone }}" class="phone-link">
+                        <i class="fas fa-phone"></i>
+                        {{ site.business.phone }}
+                    </a>
+                    <a href="#quote" class="btn btn-primary">Get Quote</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        {{ content }}
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>{{ site.business.name }}</h3>
+                    <p>{{ site.description }}</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p><i class="fas fa-phone"></i> {{ site.business.phone }}</p>
+                    <p><i class="fas fa-envelope"></i> {{ site.business.email }}</p>
+                    <p><i class="fas fa-map-marker-alt"></i> {{ site.business.address }}</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Hours</h3>
+                    <p>{{ site.business.hours }}</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        {% if site.social.facebook %}
+                        <a href="{{ site.social.facebook }}" target="_blank"><i class="fab fa-facebook"></i></a>
+                        {% endif %}
+                        {% if site.social.instagram %}
+                        <a href="{{ site.social.instagram }}" target="_blank"><i class="fab fa-instagram"></i></a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; {{ 'now' | date: "%Y" }} {{ site.business.name }}. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+    
+    <!-- Google Analytics -->
+    {% if site.google_analytics %}
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '{{ site.google_analytics }}');
+    </script>
+    {% endif %}
+</body>
+</html>

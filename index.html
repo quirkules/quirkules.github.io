@@ -1,11 +1,264 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="robots" content="noindex">
-    <title>Redirecting to https://quirkconsulting.com.au</title>
-    <meta http-equiv="refresh" content="0; URL=https://quirkconsulting.com.au">
-  </head>
+---
+layout: default
+title: "Professional Window Cleaning Services"
+description: "Complete Window Cleaning provides professional window cleaning services for residential and commercial properties across Melbourne. Crystal clear results guaranteed."
+---
 
-  <link rel="canonical" href="https://quirkconsulting.com.au">
-</html>
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-content">
+        <div class="container">
+            <h1>Professional Window Cleaning Services</h1>
+            <p class="hero-subtitle">Crystal clear results for your home or business</p>
+            <div class="hero-buttons">
+                <a href="#quote" class="btn btn-primary btn-large">Get Free Quote</a>
+                <a href="tel:{{ site.business.phone }}" class="btn btn-secondary btn-large">Call Now</a>
+            </div>
+        </div>
+    </div>
+    <div class="hero-image">
+        <!-- Add hero background image via CSS -->
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="about">
+    <div class="container">
+        <div class="section-header">
+            <h2>About Complete Window Cleaning</h2>
+            <p>Professional window cleaning services you can trust</p>
+        </div>
+        <div class="about-content">
+            <div class="about-text">
+                <h3>Experience You Can Trust</h3>
+                <p>With over 15 years of experience in the window cleaning industry, Complete Window Cleaning has built a reputation for excellence across Melbourne. We pride ourselves on delivering crystal clear results, every time.</p>
+                
+                <h3>Why Choose Us?</h3>
+                <ul class="feature-list">
+                    <li><i class="fas fa-check-circle"></i> Fully insured and licensed</li>
+                    <li><i class="fas fa-check-circle"></i> Eco-friendly cleaning solutions</li>
+                    <li><i class="fas fa-check-circle"></i> Professional equipment and techniques</li>
+                    <li><i class="fas fa-check-circle"></i> Reliable and punctual service</li>
+                    <li><i class="fas fa-check-circle"></i> 100% satisfaction guarantee</li>
+                </ul>
+            </div>
+            <div class="about-image">
+                <img src="{{ '/assets/images/about-image.jpg' | relative_url }}" alt="Professional window cleaner at work">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="services">
+    <div class="container">
+        <div class="section-header">
+            <h2>Our Services</h2>
+            <p>Comprehensive cleaning solutions for all your needs</p>
+        </div>
+        <div class="services-grid">
+            {% for service in site.services %}
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-{{ forloop.index | modulo: 4 | plus: 1 }}"></i>
+                </div>
+                <h3>{{ service.name }}</h3>
+                <p>{{ service.description }}</p>
+            </div>
+            {% endfor %}
+        </div>
+        
+        <div class="pricing-info">
+            <h3>Competitive Pricing</h3>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h4>Residential</h4>
+                    <p>From $80 per visit</p>
+                    <ul>
+                        <li>Interior and exterior windows</li>
+                        <li>Screens and sills included</li>
+                        <li>Regular maintenance available</li>
+                    </ul>
+                </div>
+                <div class="pricing-card">
+                    <h4>Commercial</h4>
+                    <p>Custom quotes available</p>
+                    <ul>
+                        <li>Scheduled regular service</li>
+                        <li>High-rise capabilities</li>
+                        <li>Emergency call-outs</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Gallery Section -->
+<section id="gallery" class="gallery">
+    <div class="container">
+        <div class="section-header">
+            <h2>Our Work</h2>
+            <p>See the difference professional window cleaning makes</p>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="{{ '/assets/images/gallery/before-after-1.jpg' | relative_url }}" alt="Before and after window cleaning">
+                <div class="gallery-overlay">
+                    <h4>Residential Property</h4>
+                    <p>Complete exterior window cleaning</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="{{ '/assets/images/gallery/commercial-1.jpg' | relative_url }}" alt="Commercial building window cleaning">
+                <div class="gallery-overlay">
+                    <h4>Commercial Building</h4>
+                    <p>Multi-storey office complex</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="{{ '/assets/images/gallery/pressure-wash-1.jpg' | relative_url }}" alt="Pressure washing service">
+                <div class="gallery-overlay">
+                    <h4>Pressure Washing</h4>
+                    <p>Driveway and exterior cleaning</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="{{ '/assets/images/gallery/gutter-clean-1.jpg' | relative_url }}" alt="Gutter cleaning service">
+                <div class="gallery-overlay">
+                    <h4>Gutter Cleaning</h4>
+                    <p>Complete gutter maintenance</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section id="testimonials" class="testimonials">
+    <div class="container">
+        <div class="section-header">
+            <h2>What Our Customers Say</h2>
+            <p>Don't just take our word for it</p>
+        </div>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>"Absolutely fantastic service! My windows have never looked better. Professional, reliable, and reasonably priced."</p>
+                <div class="testimonial-author">
+                    <strong>Sarah M.</strong>
+                    <span>Brighton Homeowner</span>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>"We've been using Complete Window Cleaning for our office building for 3 years. Always punctual and thorough."</p>
+                <div class="testimonial-author">
+                    <strong>David L.</strong>
+                    <span>Property Manager</span>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>"Great attention to detail and excellent customer service. Highly recommend for both residential and commercial cleaning."</p>
+                <div class="testimonial-author">
+                    <strong>Emma K.</strong>
+                    <span>Camberwell Resident</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="quote" class="contact">
+    <div class="container">
+        <div class="section-header">
+            <h2>Get Your Free Quote</h2>
+            <p>Contact us today for professional window cleaning services</p>
+        </div>
+        <div class="contact-content">
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <h4>Phone</h4>
+                        <p><a href="tel:{{ site.business.phone }}">{{ site.business.phone }}</a></p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h4>Email</h4>
+                        <p><a href="mailto:{{ site.business.email }}">{{ site.business.email }}</a></p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h4>Service Area</h4>
+                        <p>{{ site.business.address }}</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <h4>Hours</h4>
+                        <p>{{ site.business.hours }}</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-form">
+                <h3>Request a Quote</h3>
+                <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" name="phone" placeholder="Your Phone Number">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="address" placeholder="Property Address" required>
+                    </div>
+                    <div class="form-group">
+                        <select name="service" required>
+                            <option value="">Select Service</option>
+                            <option value="residential">Residential Window Cleaning</option>
+                            <option value="commercial">Commercial Window Cleaning</option>
+                            <option value="pressure-washing">Pressure Washing</option>
+                            <option value="gutter-cleaning">Gutter Cleaning</option>
+                            <option value="multiple">Multiple Services</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Additional details about your requirements" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-large">Send Quote Request</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

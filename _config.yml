@@ -1,0 +1,53 @@
+# Site settings
+title: "Complete Window Cleaning"
+description: "Professional window cleaning services for residential and commercial properties. Crystal clear results guaranteed."
+url: "https://quirkules.github.io" # Your GitHub Pages URL
+baseurl: "" # Root of the domain
+
+# Business Information
+business:
+  name: "Complete Window Cleaning"
+  tagline: "Crystal Clear Results, Every Time"
+  phone: "0412 345 678"
+  email: "info@completewindowcleaning.com.au"
+  address: "Servicing Melbourne Metro"
+  hours: "Mon-Fri: 7AM-5PM, Sat: 8AM-3PM"
+  
+# Services
+services:
+  - name: "Residential Window Cleaning"
+    description: "Professional home window cleaning inside and out"
+  - name: "Commercial Window Cleaning"
+    description: "Regular commercial and office building maintenance"
+  - name: "Pressure Washing"
+    description: "Driveways, patios, and building exteriors"
+  - name: "Gutter Cleaning"
+    description: "Complete gutter cleaning and maintenance"
+
+# Social Media
+social:
+  facebook: "https://facebook.com/completewindowcleaning"
+  instagram: "https://instagram.com/completewindowcleaning"
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Sass configuration
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Exclude from processing
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+
+# SEO
+google_analytics: # Add your GA tracking ID
+google_site_verification: # Add your Google Search Console verification code
