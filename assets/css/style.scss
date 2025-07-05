@@ -15,6 +15,88 @@
     --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
+// FAQ Section
+.faq {
+    padding: 4rem 0;
+    background-color: var(--white);
+    
+    .faq-grid {
+        max-width: 800px;
+        margin: 0 auto;
+        
+        .faq-item {
+            margin-bottom: 1rem;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: box-shadow 0.3s ease;
+            
+            &:hover {
+                box-shadow: var(--shadow);
+            }
+            
+            .faq-question {
+                width: 100%;
+                background: var(--white);
+                border: none;
+                padding: 1.5rem;
+                text-align: left;
+                cursor: pointer;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                transition: background-color 0.3s ease;
+                
+                &:hover {
+                    background-color: var(--light-gray);
+                }
+                
+                &[aria-expanded="true"] {
+                    background-color: var(--light-gray);
+                    
+                    .faq-icon {
+                        transform: rotate(45deg);
+                    }
+                }
+                
+                h3 {
+                    margin: 0;
+                    font-size: 1.1rem;
+                    color: var(--text-dark);
+                    font-weight: 600;
+                }
+                
+                .faq-icon {
+                    font-size: 1.5rem;
+                    color: var(--primary-color);
+                    font-weight: 300;
+                    transition: transform 0.3s ease;
+                    min-width: 24px;
+                    text-align: center;
+                }
+            }
+            
+            .faq-answer {
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease, padding 0.3s ease;
+                background-color: var(--white);
+                
+                &.active {
+                    max-height: 500px;
+                    padding: 0 1.5rem 1.5rem;
+                }
+                
+                p {
+                    margin: 0;
+                    color: var(--text-light);
+                    line-height: 1.6;
+                }
+            }
+        }
+    }
+}
+
 // Reset and base styles
 * {
     margin: 0;
