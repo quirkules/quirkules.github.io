@@ -232,7 +232,7 @@ description: "Complete Window Cleaning provides professional window cleaning ser
             
             <div class="contact-form">
                 <h3>Request a Quote</h3>
-                <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                <form action="mailto:{{ site.business.email }}?subject=Window Cleaning Quote Request" method="post" enctype="text/plain">
                     <div class="form-group">
                         <input type="text" name="name" placeholder="Your Name" required>
                     </div>
