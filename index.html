@@ -60,7 +60,7 @@ description: "Complete Window Cleaning provides professional window cleaning ser
             {% for service in site.services %}
             <div class="service-card">
                 <div class="service-icon">
-                    {% assign icon_classes = "home,building,spray-can,grip-lines" | split: "," %}
+                    {% assign icon_classes = "home,building" | split: "," %}
                     {% assign icon_index = forloop.index0 %}
                     <i class="fas fa-{{ icon_classes[icon_index] }}"></i>
                 </div>
@@ -68,30 +68,6 @@ description: "Complete Window Cleaning provides professional window cleaning ser
                 <p>{{ service.description }}</p>
             </div>
             {% endfor %}
-        </div>
-        
-        <div class="pricing-info">
-            <h3>Competitive Pricing</h3>
-            <div class="pricing-grid">
-                <div class="pricing-card">
-                    <h4>Residential</h4>
-                    <p>From $80 per visit</p>
-                    <ul>
-                        <li>Interior and exterior windows</li>
-                        <li>Screens and sills included</li>
-                        <li>Regular maintenance available</li>
-                    </ul>
-                </div>
-                <div class="pricing-card">
-                    <h4>Commercial</h4>
-                    <p>Custom quotes available</p>
-                    <ul>
-                        <li>Scheduled regular service</li>
-                        <li>High-rise capabilities</li>
-                        <li>Emergency call-outs</li>
-                    </ul>
-                </div>
-            </div>
         </div>
     </div>
 </section>
@@ -115,75 +91,7 @@ description: "Complete Window Cleaning provides professional window cleaning ser
                 <img src="{{ '/assets/images/gallery/commercial-1.jpg' | relative_url }}" alt="Commercial building window cleaning">
                 <div class="gallery-overlay">
                     <h4>Commercial Building</h4>
-                    <p>Multi-storey office complex</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="{{ '/assets/images/gallery/pressure-wash-1.jpg' | relative_url }}" alt="Pressure washing service">
-                <div class="gallery-overlay">
-                    <h4>Pressure Washing</h4>
-                    <p>Driveway and exterior cleaning</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="{{ '/assets/images/gallery/gutter-clean-1.jpg' | relative_url }}" alt="Gutter cleaning service">
-                <div class="gallery-overlay">
-                    <h4>Gutter Cleaning</h4>
-                    <p>Complete gutter maintenance</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Testimonials Section -->
-<section id="testimonials" class="testimonials">
-    <div class="container">
-        <div class="section-header">
-            <h2>What Our Customers Say</h2>
-            <p>Don't just take our word for it</p>
-        </div>
-        <div class="testimonials-grid">
-            <div class="testimonial-card">
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <p>"Absolutely fantastic service! My windows have never looked better. Professional, reliable, and reasonably priced."</p>
-                <div class="testimonial-author">
-                    <strong>Sarah M.</strong>
-                    <span>Brighton Homeowner</span>
-                </div>
-            </div>
-            <div class="testimonial-card">
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <p>"We've been using Complete Window Cleaning for our office building for 3 years. Always punctual and thorough."</p>
-                <div class="testimonial-author">
-                    <strong>David L.</strong>
-                    <span>Property Manager</span>
-                </div>
-            </div>
-            <div class="testimonial-card">
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <p>"Great attention to detail and excellent customer service. Highly recommend for both residential and commercial cleaning."</p>
-                <div class="testimonial-author">
-                    <strong>Emma K.</strong>
-                    <span>Camberwell Resident</span>
+                    <p>Professional commercial window cleaning</p>
                 </div>
             </div>
         </div>
@@ -250,9 +158,6 @@ description: "Complete Window Cleaning provides professional window cleaning ser
                             <option value="">Select Service</option>
                             <option value="residential">Residential Window Cleaning</option>
                             <option value="commercial">Commercial Window Cleaning</option>
-                            <option value="pressure-washing">Pressure Washing</option>
-                            <option value="gutter-cleaning">Gutter Cleaning</option>
-                            <option value="multiple">Multiple Services</option>
                         </select>
                     </div>
                     <div class="form-group">

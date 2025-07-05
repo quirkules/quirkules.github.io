@@ -110,6 +110,10 @@ a {
     top: 0;
     z-index: 100;
     
+    @media (max-width: 768px) {
+        position: relative;
+    }
+    
     .header-content {
         display: flex;
         justify-content: space-between;
@@ -331,7 +335,7 @@ a {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 1.5rem;
-        max-width: 800px;
+        max-width: 600px;
         margin: 0 auto;
         
         .gallery-item {

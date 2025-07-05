@@ -8,9 +8,10 @@ baseurl: "" # Root of the domain
 business:
   name: "Complete Window Cleaning"
   tagline: "Crystal Clear Results, Every Time"
+  abn: "ABN No. 14 517 902 299"
   phone: "0417 011 290"
-  email: "info@completewindowcleaning.com.au"
-  address: "Servicing Melbourne Metro"
+  email: "winclean1@aussiebroadband.com.au"
+  address: "Mornington Peninsula, Melbourne Bayside and Melbourne South Eastern Suburbs"
   hours: "Mon-Fri: 7AM-5PM, Sat: 8AM-3PM"
   
 # Services
@@ -18,11 +19,7 @@ services:
   - name: "Residential Window Cleaning"
     description: "Professional home window cleaning inside and out"
   - name: "Commercial Window Cleaning"
-    description: "Regular commercial and office building maintenance"
-  - name: "Pressure Washing"
-    description: "Driveways, patios, and building exteriors"
-  - name: "Gutter Cleaning"
-    description: "Complete gutter cleaning and maintenance"
+    description: "Regular commercial window cleaning services"
 
 # Social Media
 social:
