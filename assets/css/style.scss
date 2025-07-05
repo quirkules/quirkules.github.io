@@ -85,13 +85,14 @@ a {
     }
     
     &.btn-secondary {
-        background-color: transparent;
+        background-color: var(--white);
         color: var(--primary-color);
-        border: 2px solid var(--primary-color);
+        border: 2px solid var(--white);
         
         &:hover {
             background-color: var(--primary-color);
             color: var(--white);
+            border-color: var(--primary-color);
         }
     }
     
@@ -328,8 +329,10 @@ a {
     
     .gallery-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        grid-template-columns: repeat(2, 1fr);
         gap: 1.5rem;
+        max-width: 800px;
+        margin: 0 auto;
         
         .gallery-item {
             position: relative;
@@ -602,7 +605,7 @@ a {
     }
     
     .gallery .gallery-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-template-columns: 1fr;
     }
     
     .testimonials .testimonials-grid {
