@@ -1,8 +1,8 @@
 # Site settings
 title: "Complete Window Cleaning"
 description: "Professional window cleaning services for residential and commercial properties. Crystal clear results guaranteed."
-url: "https://quirkules.github.io" # Your GitHub Pages URL
-baseurl: "" # Root of the domain
+url: "https://completewindowcleaning.net.au" # Your custom domain
+baseurl: "" # Root of the custom domain
 
 # Business Information
 business:
