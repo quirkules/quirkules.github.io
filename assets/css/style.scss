@@ -203,6 +203,18 @@ a {
         padding: 1rem 0;
         
         .logo {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            
+            .logo-image {
+                height: 50px;
+                width: auto;
+                max-width: 250px;
+                object-fit: contain;
+                margin-bottom: 0.25rem;
+            }
+            
             h1 {
                 color: var(--primary-color);
                 margin-bottom: 0;
@@ -657,6 +669,15 @@ a {
         flex-direction: column;
         gap: 1rem;
         text-align: center;
+        
+        .logo {
+            align-items: center;
+            
+            .logo-image {
+                height: 40px;
+                max-width: 200px;
+            }
+        }
         
         .contact-info {
             flex-direction: column;
